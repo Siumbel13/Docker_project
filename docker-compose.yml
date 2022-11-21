@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  mysql:
+    image: postgres:12-alpine
+    ports:
+      - '2375:2375'
+    volumes:
+      - ./data:/var/lib/postgres
+    environment:
+      - POSTGRES_DB=db
+
+      - POSTGRES_USER=siumbel13
+      - POSTGRES_PASSWORD=siumbel13
